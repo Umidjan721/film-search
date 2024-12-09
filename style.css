@@ -26,6 +26,9 @@ body{
     }
 }
 .rounded {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 20px;
     margin-bottom: 10px;
     padding: 5px;
@@ -83,6 +86,7 @@ body{
     cursor: pointer;
 }
 .movieTitle {
+    display: none;
     text-align: center;
     padding: 10px;
     font-size: 25px;
@@ -90,7 +94,7 @@ body{
     margin-bottom: 10px;
 }
 .movie{
-    display: flex;
+    display: none;
     justify-content: space-between;
     gap: 0 10px;
     margin-bottom: 10px;
@@ -119,12 +123,12 @@ body{
 .desc span {
     width: 50%;
 }
-.similarMovie {
+.similarMovies {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
-.similarMovieCards{
+.similarMovieCard{
     background-image: url(./img/film3.jpg);
     height: 600px;
     background-repeat: no-repeat;
@@ -154,7 +158,7 @@ body{
     background-size: 90%;
     background-position: center;
     cursor: pointer;
-    position: absolute;
+    /* position: absolute; */
     top: 15px;
     left: 15px;
 }
@@ -174,4 +178,21 @@ body{
 .dark .saved {
     background-color: rgba(110, 110, 110, 0.8);
     filter: invert(100%);
+}
+
+.loader {
+    display: none;
+    height: 14px;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background: var(--c),var(--c),#fff;
+    background-size: 60% 100%;
+    animation: l16 3s infinite;
+}
+.main {
+    display: none;
+}
+@keyframes l16 {
+    0%   {background-position:-150% 0,-150% 0}
+    66%  {background-position: 250% 0,-150% 0}
+    100% {background-position: 250% 0, 250% 0}
 }
