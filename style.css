@@ -56,7 +56,7 @@ body{
 }
 .nav {
     display: flex;
-    padding: 10px 20px !important;
+    padding: 10px 10px !important;
     gap: 5px;
 }
 .nav a{
@@ -123,7 +123,7 @@ body{
 .desc span {
     width: 50%;
 }
-.similarMovies {
+.similarMovie {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
@@ -158,10 +158,12 @@ body{
     background-size: 90%;
     background-position: center;
     cursor: pointer;
-    /* position: absolute; */
+    /* position: absolute;  */
     top: 15px;
     left: 15px;
 }
+
+/* темная тема */
 .dark .rounded {
     background-color: rgba(130, 130, 130, 0.5);
 }
@@ -188,11 +190,38 @@ body{
     background-size: 60% 100%;
     animation: l16 3s infinite;
 }
-.main {
-    display: none;
-}
+
 @keyframes l16 {
     0%   {background-position:-150% 0,-150% 0}
     66%  {background-position: 250% 0,-150% 0}
     100% {background-position: 250% 0, 250% 0}
+}
+
+.saved.active{
+    background-color: orange;
+    filter: invert(100%);
+}
+.favoritesCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.favoritesCard{
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.favoritTitle {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: rgba(221, 221, 221, 0.288);
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
 }
